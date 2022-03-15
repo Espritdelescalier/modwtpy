@@ -36,7 +36,7 @@ def circular_convolve_mra( signal, ker ):
         Modification of 
             https://stackoverflow.com/questions/35474078/python-1d-array-circular-convolution
     '''
-    return np.flip(np.real(np.fft.ifft( np.fft.fft(signal)*np.fft.fft(np.flip(ker))))).astype(np.int).tolist()
+    return np.flip(np.real(np.fft.ifft( np.fft.fft(signal)*np.fft.fft(np.flip(ker))))).astype(np.float).tolist()
 
 
 def circular_convolve_d(h_t, v_j_1, j):
